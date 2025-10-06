@@ -49,11 +49,14 @@ namespace WindowsFormsApp37
             Application.Exit();
         }
 
+        // 
         int id = 0;
         private void btnAdd_Click(object sender, EventArgs e)
         {
             Ticket ticket = new Ticket();
             ticket.MovieName = txtMovieName.Text;
+            ticket.ChairNumber = int.Parse(txtChairNumber.Text);
+            ticket.TicketPrice = int.Parse(txtTicketPrice.Text);
             
         }
 
