@@ -50,14 +50,19 @@ namespace WindowsFormsApp37
         }
 
         // 
-        int id = 0;
+        //int id = 0;
         private void btnAdd_Click(object sender, EventArgs e)
         {
             Ticket ticket = new Ticket();
             ticket.MovieName = txtMovieName.Text;
+            //id++;
+            //ticket.Id = id;
             ticket.ChairNumber = int.Parse(txtChairNumber.Text);
             ticket.TicketPrice = int.Parse(txtTicketPrice.Text);
-            
+            listBox1.Items.Add("Id =>"+ticket.Id + "Film Adı =>"+ " "  + ticket.MovieName + "Koltuk Numarası =>" + " " + ticket.ChairNumber + " " + "Fiyat => " + ticket.TicketPrice);
+            txtMovieName.Clear();
+            txtChairNumber.Clear();
+            txtTicketPrice.Clear();
         }
 
 
